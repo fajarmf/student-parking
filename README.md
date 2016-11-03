@@ -1,10 +1,11 @@
 # Student
 
 Submission for Soding Assessment
+
   - [x] Student can register and login with their name, email, and password
-  - [ ] *Students can purchase monthly parking passes online.*
-  - [ ] Students can obtain their current seminar schedule.
-  - [ ] Students can order official transcripts.
+  - [ ] **Students can purchase monthly parking passes online.**
+  - [ ] **Students can obtain their current seminar schedule.**
+  - [ ] **Students can order official transcripts.**
 
 To start this Student app:
 
