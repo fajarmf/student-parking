@@ -1,0 +1,18 @@
+<h2>Show pass</h2>
+
+<ul>
+
+  <li>
+    <strong>Type:</strong>
+    <%= @pass.type %>
+  </li>
+
+  <li>
+    <strong>Price:</strong>
+    <%= @pass.price %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: admin_pass_path(@conn, :edit, @pass) %>
+<%= link "Back", to: admin_pass_path(@conn, :index) %>

@@ -1,4 +1,4 @@
-defmodule Student.UserControllerTest do
+defmodule Student.Admin.UserControllerTest do
   use Student.ConnCase
 
   alias Student.User

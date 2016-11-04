@@ -1,0 +1,20 @@
+<h2>Show cart</h2>
+
+<ul>
+
+  <li>
+    <strong>User ID:</strong>
+    <%= @cart.user_id %>
+  </li>
+
+  <li>
+    <strong>Total:</strong>
+    <%= @cart.total %>
+  </li>
+
+  <li>
+    <strong>Items:</strong>
+    <%= @cart.items %>
+  </li>
+
+</ul>

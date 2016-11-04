@@ -1,0 +1,30 @@
+<h2>Listing cart</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Total</th>
+      <th>Items</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for cart <- @cart do %>
+    <tr>
+      <td><%= cart.user_id %></td>
+      <td><%= cart.total %></td>
+      <td><%= cart.items %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: admin_cart_path(@conn, :show, cart), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: admin_cart_path(@conn, :edit, cart), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: admin_cart_path(@conn, :delete, cart), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New cart", to: admin_cart_path(@conn, :new) %>

@@ -1,0 +1,28 @@
+<h2>Listing passes</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Price</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for pass <- @passes do %>
+    <tr>
+      <td><%= pass.type %></td>
+      <td><%= pass.price %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: pass_path(@conn, :show, pass), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: pass_path(@conn, :edit, pass), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: pass_path(@conn, :delete, pass), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New pass", to: pass_path(@conn, :new) %>

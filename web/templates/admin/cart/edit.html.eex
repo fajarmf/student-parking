@@ -1,0 +1,6 @@
+<h2>Edit cart</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: admin_cart_path(@conn, :update, @cart) %>
+
+<%= link "Back", to: admin_cart_path(@conn, :index) %>

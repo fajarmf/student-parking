@@ -1,0 +1,6 @@
+<h2>Edit pass</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: admin_pass_path(@conn, :update, @pass) %>
+
+<%= link "Back", to: admin_pass_path(@conn, :index) %>

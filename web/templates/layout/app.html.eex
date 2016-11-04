@@ -28,7 +28,9 @@
             </li>
           </ul>
         </nav>
-        <span class="logo"></span>
+        <%= link to: page_path(@conn, :index) do %>
+          <span class="logo"></span>
+        <%= end %>
       </header>
 
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>

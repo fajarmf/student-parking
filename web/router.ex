@@ -17,8 +17,16 @@ defmodule Student.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
-    resources "/users", UserController
     resources "/sessions", SessionController, only: [:new, :create, :delete]
+    resources "/cart", CartController, singleton: true, except: [:new, :edit]
+    resources "/passes", PassController, only: [:index]
+  end
+
+  scope "/admin", Student.Admin do
+    pipe_through :browser
+    resources "/users", UserController
+    resources "/passes", PassController, as: :admin_pass
+    resources "/carts", CartController, as: :admin_cart
   end
 
   # Other scopes may use custom stacks.

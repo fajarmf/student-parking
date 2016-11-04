@@ -1,4 +1,4 @@
-defmodule Student.UserController do
+defmodule Student.Admin.UserController do
   use Student.Web, :controller
   alias Student.User
 
