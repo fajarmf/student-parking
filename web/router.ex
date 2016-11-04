@@ -18,7 +18,7 @@ defmodule Student.Router do
 
     get "/", PageController, :index
     resources "/sessions", SessionController, only: [:new, :create, :delete]
-    resources "/cart", CartController, singleton: true, except: [:new, :edit]
+    resources "/cart", CartController, singleton: true, except: [:new, :edit, :create]
     resources "/passes", PassController, only: [:index]
   end
 

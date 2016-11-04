@@ -9,7 +9,6 @@ defmodule Student.Repo.Migrations.CreateCart do
 
       timestamps()
     end
-    create index(:cart, [:user_id])
-
+    create unique_index(:cart, [:user_id])
   end
 end

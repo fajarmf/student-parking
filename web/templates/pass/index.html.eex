@@ -16,13 +16,14 @@
       <td><%= pass.price %></td>
 
       <td class="text-right">
-        <%= link "Show", to: pass_path(@conn, :show, pass), class: "btn btn-default btn-xs" %>
-        <%= link "Edit", to: pass_path(@conn, :edit, pass), class: "btn btn-default btn-xs" %>
-        <%= link "Delete", to: pass_path(@conn, :delete, pass), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+
+<%= form_for @changeset, @action, [method: "put"], fn f -> %>
+    <%= hidden_input f, :pass_id, value: pass.id %>
+    <%= submit "Buy", class: "btn btn-primary" %>
+<% end %>
+
       </td>
     </tr>
 <% end %>
   </tbody>
 </table>
-
-<%= link "New pass", to: pass_path(@conn, :new) %>

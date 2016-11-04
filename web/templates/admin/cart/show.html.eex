@@ -14,7 +14,13 @@
 
   <li>
     <strong>Items:</strong>
-    <%= @cart.items %>
+    <ul>
+      <%= for item <- @cart.items do %>
+        <li>
+          <%= "#{item["type"]} - #{item["price"]} - #{item["quantity"]}" %>
+        </li>
+      <%= end %>
+    </ul>
   </li>
 
 </ul>

@@ -15,7 +15,15 @@
     <tr>
       <td><%= cart.user_id %></td>
       <td><%= cart.total %></td>
-      <td><%= cart.items %></td>
+      <td>
+        <ul>
+          <%= for item <- cart.items do %>
+            <li>
+              <%= "#{item["type"]} - #{item["price"]} - #{item["quantity"]}" %>
+            </li>
+          <%= end %>
+        </ul>
+      </td>
 
       <td class="text-right">
         <%= link "Show", to: admin_cart_path(@conn, :show, cart), class: "btn btn-default btn-xs" %>
