@@ -6,9 +6,21 @@
   <% end %>
 
   <div class="form-group">
-    <%= label f, :total, class: "control-label" %>
-    <%= number_input f, :total, step: "any", class: "form-control" %>
-    <%= error_tag f, :total %>
+    <%= label f, :new_item_type, class: "control-label" %>
+    <%= text_input f, :new_item_type, step: "any", class: "form-control" %>
+    <%= error_tag f, :new_item_type %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :new_item_price, class: "control-label" %>
+    <%= number_input f, :new_item_price, step: "any", class: "form-control" %>
+    <%= error_tag f, :new_item_price %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :new_item_quantity, class: "control-label" %>
+    <%= number_input f, :new_item_quantity, step: "any", class: "form-control" %>
+    <%= error_tag f, :new_item_quantity %>
   </div>
 
   <div class="form-group">

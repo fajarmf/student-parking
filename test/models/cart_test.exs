@@ -3,7 +3,7 @@ defmodule Student.CartTest do
 
   alias Student.Cart
 
-  @valid_attrs %{items: [%{"price" => "1.2", "quantity" => "3"}], total: "120.5"}
+  @valid_attrs %{new_item_type: "bike", new_item_quantity: 3, new_item_price: 1.2}
   @invalid_attrs %{}
 
   test "changeset with valid attributes" do

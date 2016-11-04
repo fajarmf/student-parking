@@ -17,7 +17,7 @@
       <td><%= cart.total %></td>
       <td>
         <ul>
-          <%= for item <- cart.items do %>
+          <%= for item <- (cart.items || []) do %>
             <li>
               <%= "#{item["type"]} - #{item["price"]} - #{item["quantity"]}" %>
             </li>

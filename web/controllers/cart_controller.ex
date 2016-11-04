@@ -18,8 +18,6 @@ defmodule Student.CartController do
 
     full_params = populate_cart(cart_params, current_user.id, pass_id)
     changeset = Cart.changeset(cart, full_params)
-    require IEx
-    IEx.pry
 
     case upsert(changeset) do
       {:ok, _cart} ->

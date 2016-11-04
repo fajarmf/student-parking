@@ -46,8 +46,6 @@ defmodule Student.Cart do
 
   defp calculate_total(changeset) do
     if items = get_change(changeset, :items) do
-      require IEx
-      IEx.pry
       {_, total} = Enum.flat_map_reduce(items, 0.0, fn (i, acc) -> {i, acc + i["price"] * i["quantity"]} end)
       changeset
       |> put_change(:total, total)
